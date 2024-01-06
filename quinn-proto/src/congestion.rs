@@ -3,7 +3,7 @@
 use crate::connection::RttEstimator;
 use std::any::Any;
 use std::sync::Arc;
-use std::time::Instant;
+use crate::time::Instant;
 
 mod bbr;
 mod cubic;

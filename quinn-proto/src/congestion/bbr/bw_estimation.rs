@@ -1,7 +1,10 @@
 use std::fmt::{Debug, Display, Formatter};
-use std::time::{Duration, Instant};
+use std::time::{Duration};
+
+use crate::time::Instant;
 
 use super::min_max::MinMax;
+
 
 #[derive(Clone, Debug)]
 pub(crate) struct BandwidthEstimation {

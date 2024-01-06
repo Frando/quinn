@@ -8,14 +8,17 @@ use std::{
     ops::RangeFrom,
     str,
     sync::{Arc, Mutex},
-    time::{Duration, Instant},
+    time::{Duration},
 };
+
 
 use assert_matches::assert_matches;
 use bytes::BytesMut;
 use lazy_static::lazy_static;
 use rustls::{Certificate, KeyLogFile, PrivateKey};
 use tracing::{info_span, trace};
+
+use crate::time::Instant;
 
 use super::*;
 

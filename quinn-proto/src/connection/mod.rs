@@ -5,7 +5,7 @@ use std::{
     fmt, io, mem,
     net::{IpAddr, SocketAddr},
     sync::Arc,
-    time::{Duration, Instant},
+    time::{Duration},
 };
 
 use bytes::{Bytes, BytesMut};
@@ -29,6 +29,7 @@ use crate::{
         EndpointEventInner,
     },
     token::ResetToken,
+    time::Instant,
     transport_parameters::TransportParameters,
     Dir, EndpointConfig, Frame, Side, StreamId, Transmit, TransportError, TransportErrorCode,
     VarInt, MAX_STREAM_COUNT, MIN_INITIAL_SIZE, TIMER_GRANULARITY,

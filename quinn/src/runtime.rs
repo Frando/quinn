@@ -6,8 +6,9 @@ use std::{
     pin::Pin,
     sync::Arc,
     task::{Context, Poll},
-    time::Instant,
 };
+
+use proto::time::Instant;
 
 use udp::{RecvMeta, Transmit};
 

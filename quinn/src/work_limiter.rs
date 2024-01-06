@@ -1,4 +1,6 @@
-use std::time::{Duration, Instant};
+use std::time::{Duration};
+
+use proto::time::Instant;
 
 /// Limits the amount of time spent on a certain type of work in a cycle
 ///
@@ -47,7 +49,7 @@ impl WorkLimiter {
             desired_cycle_time,
             smoothed_time_per_work_item_nanos: 0.0,
             #[cfg(test)]
-            get_time: std::time::Instant::now,
+            get_time: crate::time::Instant::now,
         }
     }
 

@@ -139,6 +139,7 @@ fn read_after_close() {
             .unwrap()
             .await
             .expect("connect");
+        runtime
         tokio::time::sleep_until(Instant::now() + Duration::from_millis(100)).await;
         let mut stream = new_conn.accept_uni().await.expect("incoming streams");
         let msg = stream

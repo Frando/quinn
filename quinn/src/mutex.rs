@@ -8,9 +8,11 @@ mod tracking {
     use super::*;
     use std::{
         collections::VecDeque,
-        time::{Duration, Instant},
+        time::{Duration},
     };
     use tracing::warn;
+
+    use proto::time::Instant;
 
     #[derive(Debug)]
     struct Inner<T> {

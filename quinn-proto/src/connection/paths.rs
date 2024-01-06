@@ -1,7 +1,7 @@
-use std::{cmp, net::SocketAddr, time::Duration, time::Instant};
+use std::{cmp, net::SocketAddr, time::Duration};
 
 use super::{mtud::MtuDiscovery, pacing::Pacer};
-use crate::{config::MtuDiscoveryConfig, congestion, packet::SpaceId, TIMER_GRANULARITY};
+use crate::{config::MtuDiscoveryConfig, congestion, packet::SpaceId, TIMER_GRANULARITY, time::Instant};
 
 /// Description of a particular network path
 pub(super) struct PathData {

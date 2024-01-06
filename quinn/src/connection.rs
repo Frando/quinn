@@ -6,13 +6,13 @@ use std::{
     pin::Pin,
     sync::Arc,
     task::{Context, Poll, Waker},
-    time::{Duration, Instant},
+    time::{Duration},
 };
 
 use crate::runtime::{AsyncTimer, AsyncUdpSocket, Runtime};
 use bytes::{Bytes, BytesMut};
 use pin_project_lite::pin_project;
-use proto::{ConnectionError, ConnectionHandle, ConnectionStats, Dir, StreamEvent, StreamId};
+use proto::{ConnectionError, ConnectionHandle, ConnectionStats, Dir, StreamEvent, StreamId, time::Instant};
 use rustc_hash::FxHashMap;
 use thiserror::Error;
 use tokio::sync::{futures::Notified, mpsc, oneshot, Notify};

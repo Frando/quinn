@@ -1,13 +1,14 @@
 use std::any::Any;
 use std::fmt::Debug;
 use std::sync::Arc;
-use std::time::{Duration, Instant};
+use std::time::{Duration};
 
 use rand::{Rng, SeedableRng};
 
 use crate::congestion::bbr::bw_estimation::BandwidthEstimation;
 use crate::congestion::bbr::min_max::MinMax;
 use crate::connection::RttEstimator;
+use crate::time::Instant;
 
 use super::{Controller, ControllerFactory, BASE_DATAGRAM_SIZE};
 

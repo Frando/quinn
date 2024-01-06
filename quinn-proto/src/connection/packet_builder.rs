@@ -1,4 +1,3 @@
-use std::time::Instant;
 
 use bytes::{Bytes, BytesMut};
 use rand::Rng;
@@ -9,6 +8,7 @@ use crate::{
     frame::{self, Close},
     packet::{Header, LongType, PacketNumber, PartialEncode, SpaceId, FIXED_BIT},
     TransportError, TransportErrorCode,
+    time::Instant
 };
 
 pub(super) struct PacketBuilder {

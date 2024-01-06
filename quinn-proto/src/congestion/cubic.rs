@@ -1,8 +1,9 @@
 use std::any::Any;
 use std::sync::Arc;
-use std::time::{Duration, Instant};
+use std::time::{Duration};
 
 use super::{Controller, ControllerFactory, BASE_DATAGRAM_SIZE};
+use crate::time::Instant;
 use crate::connection::RttEstimator;
 use std::cmp;
 

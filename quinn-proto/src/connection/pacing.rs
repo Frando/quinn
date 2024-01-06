@@ -1,8 +1,10 @@
 //! Pacing of packet transmissions.
 
-use std::time::{Duration, Instant};
+use std::time::{Duration};
 
 use tracing::warn;
+
+use crate::time::Instant;
 
 /// A simple token-bucket pacer
 ///

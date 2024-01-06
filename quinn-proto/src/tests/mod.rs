@@ -3,7 +3,7 @@ use std::{
     mem,
     net::{Ipv4Addr, Ipv6Addr, SocketAddr},
     sync::Arc,
-    time::{Duration, Instant},
+    time::{Duration },
 };
 
 use assert_matches::assert_matches;
@@ -19,6 +19,7 @@ use crate::{
     cid_generator::{ConnectionIdGenerator, RandomConnectionIdGenerator},
     frame::FrameStruct,
     transport_parameters::TransportParameters,
+    time::Instant
 };
 mod util;
 use util::*;
